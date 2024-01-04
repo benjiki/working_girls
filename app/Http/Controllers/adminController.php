@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\orders;
+use App\Models\workers;
+
 
 
 class adminController extends Controller
@@ -12,10 +14,10 @@ class adminController extends Controller
     //
     public function mainpageadmin()
     {
-        $total_orders = 0;
-        $total_customers = 0;
-        $total_workers = 0;
-        $total_req = 0;
+        $total_orders = orders::all()->count();
+        $total_customers = User::where('user_type', 2)->where('status', 'active')->count();
+        $total_workers = workers::all()->count();
+        $total_req = User::where('user_type', 2)->where('status', 'watting_for_approval')->count();
 
         return view('adminusers.index', [
             'total_req' => $total_req,

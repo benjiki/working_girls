@@ -186,7 +186,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>Comp</h3>
+                <h3>Admin management</h3>
             </div>
             <div class="page-content">
                 <section class="row">
@@ -261,18 +261,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        {{-- <div class="row">
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>JObs</h4>
+                                        <h4></h4>
                                     </div>
                                     <div class="card-body">
                                         <div id="chart-profile-visit"></div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="row">
                             <div class="col-12 col-xl-4">
                              

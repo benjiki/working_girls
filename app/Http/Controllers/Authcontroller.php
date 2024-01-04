@@ -129,15 +129,17 @@ class Authcontroller extends Controller
 
         if (Auth::attempt($credentials)) {
             $userType = Auth::user()->user_type;
+            $userstatus = Auth::user()->status;
             $userid =  Auth::user()->id;
-            if ($userType == 3) {
+            if ($userType == 3 && $userstatus === "active") {
                 return redirect()->route('indexs');
             } elseif ($userType == 1) {
                 return redirect()->route('indexs');
-            }
-            if ($userType == 2) {
+            } elseif ($userType == 2 && $userstatus === "active") {
                 Session::put('customer_id', $userid);
                 return redirect()->route('m_v');
+            } else {
+                return redirect()->back()->withInput()->withErrors(['username' => 'Invalid credentials try again.']);
             }
         } else {
             return redirect()->back()->withInput()->withErrors(['username' => 'Invalid credentials.']);
