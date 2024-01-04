@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="#3498db">
+  <!-- Circle background -->
+  <circle cx="200" cy="200" r="160" stroke="#3498db" stroke-width="15" fill="none" />
+
+  <!-- Checkmark icon -->
+  <path d="M120 150 L170 200 L270 100" fill="none" stroke="#3498db" stroke-width="15" stroke-linecap="round"/>
+
+  <!-- Text -->
+  <text x="50%" y="70%" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#3498db" dy=".3em">Waiting for Verification</text>
+</svg>
