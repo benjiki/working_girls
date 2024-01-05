@@ -174,7 +174,7 @@ class frontendController extends Controller
         }
 
         $workers_list = workers::where('workerstatus', 'active')
-            ->whereBetween('workerweight', [$minWeight, $maxWeight])
+            ->whereBetween('workerkg', [$minWeight, $maxWeight])
             ->inRandomOrder()
             ->paginate(20);
 
@@ -213,7 +213,7 @@ class frontendController extends Controller
         }
 
         $workers_list = workers::where('workerstatus', 'active')
-            ->whereBetween('workerheight', [$minHeight, $maxHeight])
+            ->whereBetween('workerhight', [$minHeight, $maxHeight])
             ->inRandomOrder()
             ->paginate(20);
 

@@ -104,7 +104,6 @@
                   @endforeach
                   
                   <div class="cart-total-money">
-                    <h5>Total: <span class="money">$159.00</span></h5>
                   </div>
                   <div class="cart-btn">
                     <a href="{{route('o_checkout')}}">Checkout</a>
@@ -238,15 +237,15 @@
               <div class="product-sidebar-item">
                 <h4 class="product-sidebar-title">Search</h4>
                 <div class="product-sidebar-body">
-                  <div class="product-sidebar-search-form">
-                    <form action="{{route('search_name')}}" method="POST">
+                  {{-- <div class="product-sidebar-search-form">
+                    <form action="{{route('search_name',['worker_name'=>'username'])}}">
                         @csrf
                       <div class="form-group">
                         <input class="form-control" type="search" name="username" placeholder="Search by name">
                         <button type="submit" class="btn-src"><i class="zmdi zmdi-search"></i></button>
                       </div>
                     </form>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
               <!--== End Product Sidebar Item ==-->

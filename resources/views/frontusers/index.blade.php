@@ -259,7 +259,7 @@
               <div class="product-sidebar-item">
                 <h4 class="product-sidebar-title">Search</h4>
                 <div class="product-sidebar-body">
-                  <div class="product-sidebar-search-form">
+                  {{-- <div class="product-sidebar-search-form">
                     <form action="{{route('search_name')}}" method="POST">
                       @csrf
                       <div class="form-group">
@@ -267,7 +267,7 @@
                         <button type="submit" class="btn-src"><i class="zmdi zmdi-search"></i></button>
                       </div>
                     </form>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
               <!--== End Product Sidebar Item ==-->
